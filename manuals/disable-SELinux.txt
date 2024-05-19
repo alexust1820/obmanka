@@ -1,0 +1,4 @@
+#Открываем конфиг файл и меняем SELINUX=enforcing на SELINUX=disabled
+sudo nano /etc/selinux/config
+
+#Далее перезагружаем виртуальную машину

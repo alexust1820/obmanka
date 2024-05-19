@@ -1,0 +1,18 @@
+#Генерация закрытого и открытого ключей
+wg genkey | tee private.key | wg pubkey > public.key
+
+#Пример когфига /etc/wireguard/wg0.conf
+[Interface]
+Address = 2.1.1.1/30 #адрес интерфейса wireguard
+SaveConfig = true
+ListenPort = 10027
+PrivateKey = EBBQGHSKUXg2FZ0zDecDvdUW+Bi3Kjoku9cAfGJf12s=
+
+[Peer]
+PublicKey = JusaORSQLTKhB1+0IdBsnNDp5Y4k+su+10L0pg0cChg=
+AllowedIPs = 2.1.1.0/30, 10.2.3.0/24 #подсеть VPN + соседа
+Endpoint = 10.2.13.3:10027 #физический адрес интерфейса другой машины (не wireguard)
+
+
+#Добавить wireguard в автозагрузку и запустить
+systemctl enable --now wg-quick@wg0

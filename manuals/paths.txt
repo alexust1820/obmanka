@@ -1,0 +1,19 @@
+DNS Bind9 на RedOS:
+Файл named.conf - /etc/named.conf
+Файлы зон - /var/named/master/...
+
+Сетевые интерфейсы на RedOS:
+Файл ens33.nmconnection - /etc/NetworkManager/system-connections/ens33.nmconnection
+
+DHCP isc-dhcp-server на Debian:
+Файл dhcpd.conf - /etc/dhcp/dhcpd.conf
+Файл isc-dhcp-server (там указываем интерфейс, на котором работает dhcp-сервер) - /etc/default/isc-dhcp-server
+
+Сетевые интерфейсы на Debian:
+Файл interfaces - /etc/network/interfaces
+
+Конфигурационный файл FRR на Debian:
+Файлы daemons и frr.conf - /etc/frr/...
+
+
+

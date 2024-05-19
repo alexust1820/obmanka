@@ -1,0 +1,11 @@
+$TTL 604800       ;
+hq.work.    IN      SOA     hq-srv.hq.work. alexkustov.mail.com. (
+                1               ; Serial
+                600             ; Refresh
+                3600            ; Retry
+                1w              ; Expire
+                360             ; Minimum TTL
+                )
+	IN	NS	hq-srv.hq.work.
+hq-srv	IN	A	20.0.0.2
+hq-r	IN	A	20.0.0.1

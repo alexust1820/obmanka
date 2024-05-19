@@ -1,0 +1,10 @@
+$TTL    3600
+@  IN      SOA     hq.work. alexkustov.mail.com (
+                   20060204        ; Serial
+                   3600            ; Refresh
+                   900             ; Retry
+                   3600000         ; Expire
+                   3600 )          ; Minimum
+	IN	NS	branch.work.
+2	IN	PTR	hq-srv
+1	IN	PTR	hq-r

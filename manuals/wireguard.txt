@@ -16,3 +16,6 @@ Endpoint = 10.2.13.3:10027 #физический адрес интерфейса
 
 #Добавить wireguard в автозагрузку и запустить
 systemctl enable --now wg-quick@wg0
+
+#Запрет на изменения конфигурационного файла
+chattr +i /etc/wireguard/wg0.conf (для отмены запрета - chattr -i /etc/wireguard/wg0.conf)

@@ -1,0 +1,11 @@
+$TTL 604800       ;
+branch.work.   IN      SOA     branch.work. alexkustov.mail.com. (
+                1               ; Serial
+                600             ; Refresh
+                3600            ; Retry
+                1w              ; Expire
+                360             ; Minimum TTL
+                )
+	IN	NS	hq-srv.hq.work.
+br-srv	IN	A	10.0.0.2
+br-r	IN	A	10.0.0.1

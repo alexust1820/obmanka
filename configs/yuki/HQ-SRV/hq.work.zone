@@ -1,0 +1,12 @@
+$TTL 604800       ;
+@    IN      SOA     hq.work. root.hq.work. (
+                1               ; Serial
+                600             ; Refresh
+                3600            ; Retry
+                1w              ; Expire
+                360             ; Minimum TTL
+                )
+@	IN      NS      hq.work.
+@	IN	A	127.0.0.0
+hq-r	IN      A       10.2.0.1
+hq-srv	IN      A       10.2.0.10

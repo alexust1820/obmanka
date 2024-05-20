@@ -1,0 +1,12 @@
+subnet 10.2.0.0 netmask 255.255.255.192 {
+  range 10.2.0.10 10.2.0.50;
+#  option domain-name-servers ns1.internal.example.org;
+  option routers 10.2.0.1;
+  default-lease-time 600;
+  max-lease-time 7200;
+}
+
+host hq-srv {
+hardware ethernet 00:0c:29:fa:d1:57;
+fixed-address 10.2.0.10;
+}

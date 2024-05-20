@@ -1,0 +1,10 @@
+[Interface]
+Address = 10.0.0.2/24
+SaveConfig = true
+ListenPort = 45678
+PrivateKey = SJ6R9S+7WqQRlDi46WwwMhIpPG6y+wJOZvhNSqbxe1g=
+
+[Peer]
+PublicKey = CwCGODzSaDRewB0+suEMfjStGZCK526+JeRRaoXyC0k=
+AllowedIPs = 10.0.0.1/24, 224.0.0.0/24, 192.168.10.0/26
+Endpoint = 100.64.10.10:45678

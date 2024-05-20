@@ -6,10 +6,10 @@ wg genkey | tee private.key | wg pubkey > public.key
 Address = 2.1.1.1/30 #адрес интерфейса wireguard
 SaveConfig = true
 ListenPort = 10027
-PrivateKey = EBBQGHSKUXg2FZ0zDecDvdUW+Bi3Kjoku9cAfGJf12s=
+PrivateKey = <private-key>
 
 [Peer]
-PublicKey = JusaORSQLTKhB1+0IdBsnNDp5Y4k+su+10L0pg0cChg=
+PublicKey = <public-key>
 AllowedIPs = 2.1.1.0/30, 10.2.3.0/24 #подсеть VPN + соседа
 Endpoint = 10.2.13.3:10027 #физический адрес интерфейса другой машины (не wireguard)
 

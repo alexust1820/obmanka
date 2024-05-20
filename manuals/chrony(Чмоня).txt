@@ -4,6 +4,9 @@ timedatectl set-timezone Europe/Moscow
 #После раскопирования конфигов не забываем перезагружать сервис.
 systemctl restart chronyd
 
+#Добавление демона в автозапуск (Да, да, на некоторых системах необходимо добавлять chrony в автозагрузку, например, redos) 
+systemctl enable --now chronyd
+
 #Для проверки того, подключилося ли всё к серверу времени используем эту команду.
 chronyc sources
 

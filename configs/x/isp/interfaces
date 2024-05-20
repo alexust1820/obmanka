@@ -1,0 +1,41 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The Internet interface
+allow-hotplug ens33
+        iface ens33 inet dhcp
+
+# ISP-1 
+allow-hotplug ens34
+iface ens34 inet static
+        address 100.64.10.1
+        netmask 255.255.255.0
+iface ens34 inet6 static
+        address 100:64:10::1
+        netmask 64
+
+# ISP-2 
+allow-hotplug ens36
+iface ens36 inet static
+        address 100.64.20.1
+        netmask 255.255.255.0
+iface ens36 inet6 static
+        address 100:64:20::1
+        netmask 64
+
+# CLI 
+allow-hotplug ens37
+iface ens37 inet static
+        address 100.64.30.1
+        netmask 255.255.255.0
+iface ens37 inet6 static
+        address 100:64:30::1
+        netmask 64
+
+pre-up iptables-restore < /etc/iptables.rules

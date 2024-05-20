@@ -1,0 +1,33 @@
+Include /etc/ssh/sshd_config.d/*.conf
+
+Port 2222
+
+PubkeyAuthentication no
+
+KbdInteractiveAuthentication no
+
+UsePAM yes
+
+X11Forwarding yes
+
+PrintMotd no
+
+AcceptEnv LANG LC_*
+
+Subsystem       sftp    /usr/lib/openssh/sftp-server
+
+Banner /etc/openssh/banner
+
+PermitRootLogin no
+
+#PasswordAuthentication no
+
+MaxAuthTries 4
+
+PermitEmptyPasswords no
+
+LoginGraceTime 5m
+
+ClientAliveInterval 60
+
+ClientAliveCountMax 5

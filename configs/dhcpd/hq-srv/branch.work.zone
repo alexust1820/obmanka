@@ -6,7 +6,7 @@ $TTL 604800       ;
                 1w              ; Expire
                 360             ; Minimum TTL
                 )
-        IN      NS      branch.work.
-	IN      A       127.0.0.0
+          IN      NS      branch.work.
+	  IN      A       127.0.0.0
 br-r      IN      A       192.168.20.1
 br-srv    IN      A       192.168.20.10

@@ -1,1 +1,4 @@
-https://github.com/NyashMan/DEMO2024?tab=readme-ov-file
+Saint repo - https://github.com/NyashMan/DEMO2024?tab=readme-ov-file
+
+#Как скачать репу, не подставляя жопы:
+wget -r https://zalypa.duckdns.org

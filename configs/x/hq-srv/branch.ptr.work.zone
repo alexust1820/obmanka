@@ -1,0 +1,10 @@
+$TTL 604800	  ;
+@    IN	SOA     branch.work. root.branch.work. (
+                1               ; Serial
+                600             ; Refresh
+                3600            ; Retry
+                1w              ; Expire
+                360             ; Minimum TTL
+                )
+@	IN	NS	localhost.
+1	IN	PTR	br-r

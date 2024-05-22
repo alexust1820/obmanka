@@ -1,0 +1,23 @@
+#На сервере, который можем выбрать сами по желанию в /etc/rsyslog.conf раскомментируем строки.
+module(load="imudp")
+input(type="imudp" port="514")
+
+module(load="imtcp")
+input(type="imtcp" port="514")
+
+#И добавляем в раздел RULES. Предваритльно создаём папку в директории /var/log. Можете создать любую. Только потом три семёрки выдайте через chmod.
+$template mikrolog, "/var/log/domain/%HOSTNAME%/%HOSTNAME%.log
+*.* ?mikrolog
+& ~
+
+#На клиентах в раздел RULES добавляем.
+*.* @10.2.0.10:514
+systemctl restart rsyslog
+
+#На дебианы надо предварительно скачать пакет bc.
+apt install bc
+
+#После берём скрипт logging.sh и пихаем в /bin.
+chmod +x /bin/logging.sh
+crontab -e
+* * * * * nohup /bin/logging.sh &

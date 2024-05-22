@@ -23,7 +23,7 @@ server  -rw,soft,intr,rsize=8192,wsize=8192 10.2.0.10:/srv/nfs/Branch_Files
 
 systemctl restart autofs
 
-#Теперь самое сука интересное. Берём два скрипта. mount_nfs.sh пихаем в папку.
+#Теперь самое сука интересное. Берём два скрипта. mount_nfs.sh пихаем в папку /etc/profile.d/.
 #А дальше пишем
 systemctl disable gdm
 systemctl stop gdm

@@ -10,7 +10,7 @@ $template mikrolog, "/var/log/domain/%HOSTNAME%/%HOSTNAME%.log
 *.* ?mikrolog
 & ~
 
-#На клиентах в раздел RULES добавляем.
+#На клиентах в раздел RULES добавляем. ISP трогать не надо, полагаю.
 *.* @10.2.0.10:514
 systemctl restart rsyslog
 

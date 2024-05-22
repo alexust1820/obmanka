@@ -1,0 +1,3 @@
+/srv/nfs/Branch_Files    *(rw,sync,no_subtree_check)
+/srv/nfs/Network         *(rw,sync,no_subtree_check)
+/srv/nfs/Admin_Files     *(rw,sync,no_subtree_check)

@@ -28,4 +28,5 @@ iface ens36 inet6 static
         netmask 122
 
 pre-up iptables-restore < /etc/iptables.up.rules
+pre-up ip6tables-restore < /etc/ip6tables.up.rules
 pre-up wg-quick up wg0

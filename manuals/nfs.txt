@@ -1,0 +1,40 @@
+#На сервер через веб-интерфейс freeipa создаём доменных пользователей branch_admin, network_admin.
+
+#Находим место на сервере и создаём три папки Network, Branch_Files, Admin_Files. В них создайте по файлику для проверки.
+
+#Идём в файлик /etc/exports и записываем следующее. Пути можете поменять.
+/srv/nfs/Branch_Files    *(rw,sync,no_subtree_check)
+/srv/nfs/Network         *(rw,sync,no_subtree_check)
+/srv/nfs/Admin_Files     *(rw,sync,no_subtree_check)
+
+#Вводим следующие гадости.
+exportfs -arv
+systemctl restart nfs-server
+
+#С сервером всё.
+
+#На клиенте ищем файл /etc/auto.master. Туда заносим фразу /mnt		/etc/auto.nfs
+#В этот файл (новый) заносим эту гадость. Айпишники поменяйте.
+server  -rw,soft,intr,rsize=8192,wsize=8192 10.2.0.10:/srv/nfs/Admin_Files
+server  -rw,soft,intr,rsize=8192,wsize=8192 10.2.0.10:/srv/nfs/Network
+server  -rw,soft,intr,rsize=8192,wsize=8192 10.2.0.10:/srv/nfs/Branch_Files
+
+#Создаём папки как с названием выше (аля Branch_Files) в папке mnt.
+
+systemctl restart autofs
+
+#Теперь самое сука интересное. Берём два скрипта. mount_nfs.sh пихаем в папку.
+#А дальше пишем
+systemctl disable gdm
+systemctl stop gdm
+
+#Нас выкинет в чёрную дыру. Не пугаемся, жмём ctrl + alt + f2. Вводим логин пароль рута и дальше.
+dnf install lightdm
+systemctl enable --now lightdm
+
+#Логинимся и идём в файл /etc/lightdm/lightdm.conf. Ищём строку session-cleanup-script=. Без пояснений, что эт такое. Ровно эта строка. 
+#В ней после равно пишем /bin/umount_nfs.sh предварительно его туда запихав. Ребутаемся.
+
+#Проверяем, монтируется ли в нужном месте папка, то есть файлики, что мы ранее создали. После жмём выйти из системы, не выключить компуктер."
+#"Заходим под другим доменным пользователем. Смотрим, смонтировалась ли нужная папка и отмонтировалась ли папка пользователя, который вышел из системы.
+#5 часов долбёжки с этим, ага.

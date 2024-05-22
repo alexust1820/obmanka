@@ -1,0 +1,11 @@
+RAID 
+lsblk - посмотреть все диски
+
+sudo mdadm --create /dev/md0 (директория где будет рейд) --level=<уровень рейда> --raid-devices=<к-во дисков> /dev/sdc /dev/sdb - создать рейд массив
+
+cat /proc/mdstat - вывести информацию о рейде
+
+sudo mkfs.ext4 /dev/md0 (директория рейда) - создать файловую систему
+
+sudo mkdir /mnt/md 
+sudo mount /dev/md0 /mnt/md - примонтирование рейда к файловой системе

@@ -5,6 +5,7 @@
 :OUTPUT ACCEPT [0:0]
 -A INPUT -p udp -m udp --dport 2222 -j ACCEPT
 -A INPUT -p udp -m udp --dport 45678 -j ACCEPT
+-A INPUT -p icmp -j ACCEPT
 -A FORWARD -p udp -m udp --dport 2222 -j ACCEPT
 -A FORWARD -p udp -m udp --dport 53 -j ACCEPT
 -A FORWARD -p tcp -m tcp --dport 80 -j ACCEPT

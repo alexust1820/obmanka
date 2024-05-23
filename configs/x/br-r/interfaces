@@ -11,11 +11,11 @@ iface lo inet loopback
 allow-hotplug ens33
 iface ens33 inet static
         address 100.64.20.5
-        netmask 255.255.255.248
+        netmask 255.255.255.0
         gateway 100.64.20.1
 iface ens33 inet6 static
         address 100:64:20::10
-        netmask 125
+        netmask 64
         gateway 100:64:20::1
 
 # br 

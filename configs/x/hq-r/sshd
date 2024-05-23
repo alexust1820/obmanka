@@ -1,6 +1,6 @@
 Include /etc/ssh/sshd_config.d/*.conf
 
-Port 2222
+Port 222
 
 PubkeyAuthentication no
 

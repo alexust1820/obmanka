@@ -8,4 +8,4 @@ $TTL 604800	  ;
                 )
 @	IN	NS	localhost.
 1	IN	PTR	hq-r
-10	IN	PTR	hq-srv
+5	IN	PTR	hq-srv

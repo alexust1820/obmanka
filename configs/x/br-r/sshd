@@ -1,6 +1,6 @@
 Include /etc/ssh/sshd_config.d/*.conf
 
-Port 2222
+Port 222
 
 PubkeyAuthentication no
 
@@ -22,11 +22,11 @@ PermitRootLogin no
 
 #PasswordAuthentication no
 
-MaxAuthTries 4
+MaxAuthTries 5
 
 PermitEmptyPasswords no
 
-LoginGraceTime 5m
+LoginGraceTime 7m
 
 ClientAliveInterval 60
 

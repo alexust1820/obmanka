@@ -22,11 +22,11 @@ PermitRootLogin no
 
 #PasswordAuthentication no
 
-MaxAuthTries 4
+MaxAuthTries 5
 
 PermitEmptyPasswords no
 
-LoginGraceTime 5m
+LoginGraceTime 7m
 
 ClientAliveInterval 60
 

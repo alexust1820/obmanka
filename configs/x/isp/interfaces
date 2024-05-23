@@ -37,5 +37,3 @@ iface ens37 inet static
 iface ens37 inet6 static
         address 100:64:30::1
         netmask 64
-
-pre-up iptables-restore < /etc/iptables.rules

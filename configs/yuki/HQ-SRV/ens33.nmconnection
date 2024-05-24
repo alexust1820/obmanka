@@ -13,7 +13,7 @@ method=auto
 
 [ipv6]
 addr-gen-mode=stable-privacy
-address1=10:2::10/122,10:2::1
+address1=10:2::10/64,10:2::1
 method=manual
 
 [proxy]

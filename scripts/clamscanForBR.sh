@@ -1,5 +1,4 @@
-USERS_TO_CHECK=("admin" "network_admin" "branch_admin" "user" "root" \
-"net_admin" "br_admin")
+USERS_TO_CHECK=("admin" "network_admin" "branch_admin" "user" "root" "net_admin" "br_admin")
 #Надо будет спросить про одинаковое имя админа. Если выдаёт ошибку о отсутствии пользователя, просто уберите его.
 
 LOG_DIR="/var/log/clamav"

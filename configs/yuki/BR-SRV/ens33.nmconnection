@@ -9,13 +9,13 @@ timestamp=1716047987
 [ethernet]
 
 [ipv4]
-address1=10.2.10.10/28,10.2.10.1
-dns=8.8.8.8;
+address1=10.2.10.10/29,10.2.10.1
+dns=10.2.0.10;
 method=manual
 
 [ipv6]
 addr-gen-mode=stable-privacy
-address1=10:2:10::10/122,10:2:10::1
+address1=10:2:10::10/64,10:2:10::1
 method=manual
 
 [proxy]

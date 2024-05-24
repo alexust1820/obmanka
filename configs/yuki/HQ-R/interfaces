@@ -15,15 +15,15 @@ iface ens33 inet static
 	gateway 10.2.20.2
 iface ens33 inet6 static
 	address 10:2:20::1
-	netmask 126
+	netmask 64
 	gateway 10:2:20::2
 
 auto ens34
 iface ens34 inet static
 	address 10.2.0.1
-	netmask 255.255.255.192
+	netmask 255.255.255.240
 iface ens34 inet6 static
 	address 10:2:0::1
-	netmask 122
+	netmask 64
 
 pre-up iptables-restore << /etc/iptables.rules

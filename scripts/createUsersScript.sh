@@ -5,8 +5,8 @@ pass="P@ssw0rd"
 
 if [[ $hostname == "CLI" || $hostname == "HQ-SRV" || $hostname == "HQ-R" ]]; then
 	echo "create admin";
-	useradd admin -m -c "Admin" -U;
-	printf "$pass\n$pass\n" | passwd admin
+	useradd adm -m -c "Admin" -U;
+	printf "$pass\n$pass\n" | passwd adm
 fi
 
 if [[ $hostname == "BR-SRV" || $hostname == "BR-R" ]]; then

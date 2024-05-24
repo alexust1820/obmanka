@@ -15,19 +15,19 @@ auto ens34
 iface ens34 inet static
 	address 10.2.20.2
 	netmask 255.255.255.252
-#	up ip route add 10.2.0.0/26 via 10.2.20.1
+	up ip route add 10.2.0.0/26 via 10.2.20.1
 iface ens34 inet6 static
 	address 10:2:20::2
-	netmask 126
+	netmask 64
 
 auto ens36
 iface ens36 inet static
 	address 10.2.30.2
 	netmask 255.255.255.252
-#	up ip route add 10.2.10.0/28 via 10.2.30.1
+	up ip route add 10.2.10.0/28 via 10.2.30.1
 iface ens36 inet6 static
 	address 10:2:30::2
-	netmask 126
+	netmask 64
 
 auto ens37
 iface ens37 inet static

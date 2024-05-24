@@ -1,0 +1,3 @@
+server  -rw,soft,intr,rsize=8192,wsize=8192 10.2.0.10:/srv/nfs/Admin_Files
+server  -rw,soft,intr,rsize=8192,wsize=8192 10.2.0.10:/srv/nfs/Network
+server  -rw,soft,intr,rsize=8192,wsize=8192 10.2.0.10:/srv/nfs/Branch_Files

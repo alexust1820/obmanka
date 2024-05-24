@@ -3,13 +3,12 @@
 :INPUT ACCEPT [7555:780560]
 :FORWARD ACCEPT [0:0]
 :OUTPUT ACCEPT [8614:629836]
--A INPUT -p udp -m udp --dport 53 -j ACCEPT #dns
--A INPUT -p tcp -m tcp --dport 80 -j ACCEPT #http
--A INPUT -p tcp -m tcp --dport 443 -j ACCEPT #https
--A INPUT -p udp -m udp --dport 45678 -j ACCEPT #Wireguard
--A INPUT -p icmp -j ACCEPT #ICMP 
--A INPUT -p tcp -m tcp --dport 222 -j ACCEPT #ssh
-#-A INPUT -j DROP #all otHER
+-A INPUT -p udp -m udp --dport 53 -j ACCEPT 
+-A INPUT -p tcp -m tcp --dport 80 -j ACCEPT 
+-A INPUT -p tcp -m tcp --dport 443 -j ACCEPT 
+-A INPUT -p udp -m udp --dport 45678 -j ACCEPT 
+-A INPUT -p icmp -j ACCEPT 
+-A INPUT -p tcp -m tcp --dport 222 -j ACCEPT  
 COMMIT
 *nat
 :PREROUTING ACCEPT [0:0]
@@ -18,4 +17,4 @@ COMMIT
 :POSTROUTING ACCEPT [0:0]
 -A POSTROUTING -o ens33 -j MASQUERADE
 COMMIT
-
+#-A INPUT -j DROP

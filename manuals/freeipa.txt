@@ -7,8 +7,12 @@
 #На сервере качаем пакеты.
 dnf install bind bind-dyndb-ldap ipa-server ipa-server-dns ipa-server-trust-ad
 
-#Вырубим на всякий dns.
+#Вырубим на всякий dns. И отключить selinux
 systemctl stop named
+
+#Вводим. Выбираем первый вараинт.
+update-alternatives --config java
+update-alternatives --config jre_openjdk
 
 #Вводим
 rpm -e java-17-openjdk-headless --nodeps
